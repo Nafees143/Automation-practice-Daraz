@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-28T00:08:01 BDT" name="Default suite" finished-at="2021-12-28T00:08:51 BDT" duration-ms="50392">
+  <suite started-at="2021-12-28T01:34:28 BDT" name="Default suite" finished-at="2021-12-28T01:35:41 BDT" duration-ms="73305">
     <groups>
     </groups>
-    <test started-at="2021-12-28T00:08:01 BDT" name="Default test" finished-at="2021-12-28T00:08:51 BDT" duration-ms="50392">
+    <test started-at="2021-12-28T01:34:28 BDT" name="Default test" finished-at="2021-12-28T01:35:41 BDT" duration-ms="73305">
       <class name="testbd.com.TC_001">
-        <test-method is-config="true" signature="open()[pri:0, instance:testbd.com.TC_001@f5acb9d]" started-at="2021-12-28T00:07:58 BDT" name="open" finished-at="2021-12-28T00:08:01 BDT" duration-ms="2525" status="PASS">
+        <test-method is-config="true" signature="open()[pri:0, instance:testbd.com.TC_001@f5acb9d]" started-at="2021-12-28T01:34:24 BDT" name="open" finished-at="2021-12-28T01:34:28 BDT" duration-ms="3186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open -->
-        <test-method signature="Daraz()[pri:0, instance:testbd.com.TC_001@f5acb9d]" started-at="2021-12-28T00:08:01 BDT" name="Daraz" finished-at="2021-12-28T00:08:51 BDT" duration-ms="50352" status="PASS">
+        <test-method signature="Daraz()[pri:0, instance:testbd.com.TC_001@f5acb9d]" started-at="2021-12-28T01:34:28 BDT" name="Daraz" finished-at="2021-12-28T01:35:41 BDT" duration-ms="73226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Daraz -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testbd.com.TC_001@f5acb9d]" started-at="2021-12-28T00:08:51 BDT" name="close" finished-at="2021-12-28T00:08:55 BDT" duration-ms="4269" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:testbd.com.TC_001@f5acb9d]" started-at="2021-12-28T01:35:41 BDT" name="close" finished-at="2021-12-28T01:35:41 BDT" duration-ms="299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

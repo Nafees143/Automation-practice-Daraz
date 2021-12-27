@@ -45,10 +45,29 @@ public class TC_001 extends DriverSetup {
 		WebElement hover = driver.findElement(By.xpath("//li[@data-cate='cate_1_4']/a/span[contains(text(),'Laptops')]"));
 		Actions action = new Actions(driver);
 		action.clickAndHold(hover).build().perform();
-		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//span[contains(text(),'Asus Laptops')]")).click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
+		
+		//assertion and add product in cart
+		String laptopItemName = "ASUS ROG Zephyrus G14 GA401QEC-K2064T AMD Ryzen 9 5900HS Processor Laptop";
+		String laptopName = driver.findElement(By.xpath("//a[contains(text(),'ASUS ROG Zephyrus G14 GA401QEC-K2064T AMD Ryzen 9 5900HS Processor Laptop')]")).getText();
+		Assert.assertEquals(laptopItemName, laptopName);
+		
+		driver.findElement(By.xpath("//a[@title='ASUS ROG Zephyrus G14 GA401QEC-K2064T AMD Ryzen 9 5900HS Processor Laptop']")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//span[contains(text(),'Add to Cart')]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//button[contains(text(),'GO TO CART')]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/label[1]/input[1]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click();
+		Thread.sleep(2000);
 		
 		//go to home
 		driver.findElement(By.xpath("//a[@data-spm='dhome']")).click();
