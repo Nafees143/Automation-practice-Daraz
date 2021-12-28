@@ -54,7 +54,7 @@ public class TC_001 extends DriverSetup {
 		String laptopName = driver.findElement(By.xpath("//a[contains(text(),'ASUS ROG Zephyrus G14 GA401QEC-K2064T AMD Ryzen 9 5900HS Processor Laptop')]")).getText();
 		Assert.assertEquals(laptopItemName, laptopName);
 		
-		driver.findElement(By.xpath("//a[@title='ASUS ROG Zephyrus G14 GA401QEC-K2064T AMD Ryzen 9 5900HS Processor Laptop']")).click();
+		driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[28]/div[1]/div[1]/div[1]/div[1]")).click();
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//span[contains(text(),'Add to Cart')]")).click();
