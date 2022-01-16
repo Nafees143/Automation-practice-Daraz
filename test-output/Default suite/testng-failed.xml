@@ -5,9 +5,9 @@
     <classes>
       <class name="testbd.com.TC_001">
         <methods>
-          <include name="open"/>
-          <include name="close"/>
           <include name="Daraz"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testbd.com.TC_001 -->
     </classes>

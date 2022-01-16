@@ -1,6 +1,7 @@
 package testbd.com;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -10,11 +11,9 @@ import bd.com.DriverSetup;
 
 public class TC_001 extends DriverSetup {
 
-	public static String baseUrl = "https://www.daraz.com.bd/";
-
 	@Test
 	public static void Daraz() throws InterruptedException {
-		driver.get(baseUrl);
+		driver.get("https://www.daraz.com.bd/");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 		
@@ -50,11 +49,11 @@ public class TC_001 extends DriverSetup {
 		Thread.sleep(2000);
 		
 		//assertion and add product in cart
-		String laptopItemName = "ASUS ROG Zephyrus G14 GA401QEC-K2064T AMD Ryzen 9 5900HS Processor Laptop";
-		String laptopName = driver.findElement(By.xpath("//a[contains(text(),'ASUS ROG Zephyrus G14 GA401QEC-K2064T AMD Ryzen 9 5900HS Processor Laptop')]")).getText();
+		String laptopItemName = "ASUS ROG Zephyrus M16 GU603HR-K8061R 11TH Gen Core-i9 Gaming Laptop";
+		String laptopName = driver.findElement(By.xpath("//a[contains(text(),'ASUS ROG Zephyrus M16 GU603HR-K8061R 11TH Gen Core-i9 Gaming Laptop')]")).getText();
 		Assert.assertEquals(laptopItemName, laptopName);
 		
-		driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[28]/div[1]/div[1]/div[1]/div[1]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'ASUS ROG Zephyrus M16 GU603HR-K8061R 11TH Gen Core')]")).click();
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//span[contains(text(),'Add to Cart')]")).click();
@@ -72,6 +71,13 @@ public class TC_001 extends DriverSetup {
 		//go to home
 		driver.findElement(By.xpath("//a[@data-spm='dhome']")).click();
 		Thread.sleep(2000);
+		
+		//card delete
+		driver.findElement(By.xpath("//body/div[@id='J_7459419030']/div[@id='J_LzdSiteNav']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/a[1]/span[1]/*[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/label[1]/input[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
 		
 		//Logout part
 		driver.findElement(By.xpath("//span[@id='myAccountTrigger']")).click();
