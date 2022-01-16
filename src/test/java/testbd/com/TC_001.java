@@ -75,9 +75,20 @@ public class TC_001 extends DriverSetup {
 		//card delete
 		driver.findElement(By.xpath("//body/div[@id='J_7459419030']/div[@id='J_LzdSiteNav']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/a[1]/span[1]/*[1]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/label[1]/input[1]")).click();
-		Thread.sleep(2000);
+		
+//		driver.findElement(By.xpath("//body/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/label[1]/input[1]")).click();
+//		Thread.sleep(2000);
+		
 		driver.findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
+		Thread.sleep(2000);
+		
+		//remove
+		driver.findElement(By.xpath("//button[contains(text(),'REMOVE')]")).click();
+		Thread.sleep(2000);
+		
+		//continue shopping
+		driver.findElement(By.xpath("//button[contains(text(),'CONTINUE SHOPPING')]")).click();
+		Thread.sleep(2000);
 		
 		//Logout part
 		driver.findElement(By.xpath("//span[@id='myAccountTrigger']")).click();
